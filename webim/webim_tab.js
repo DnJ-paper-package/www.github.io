@@ -43,7 +43,7 @@ function GetRequest(urlStr) {
     return theRequest;
 }
 //http和https 请求地址不同
-if(  window.location.protocol.toLowerCase() =="cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fwebimX2fwebimX5ftabX2ehtml" )
+if(  window.location.protocol.toLowerCase() =="https:" )
 {
     window.webim_chat_params_config={
         loadserver : "https://imlogin."+uurl+":8081/msg_server", //负载服务地址
@@ -327,7 +327,7 @@ window.webim = {
         }
 
         // 数据存入会话（不考虑执行的结果）,todo:邮箱错误
-        $.post( 'cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2findexX2ephpX3frX3dInquiryX2fWebIMSave',
+        $.post( '/index.php?r=Inquiry/WebIMSave',
             {
                 pid           : webim.pinfo.pid,
                 pname  : webim.pinfo.pname,
@@ -483,7 +483,7 @@ window.webim = {
                     //开始聊天后缓存买家id
                     webim.setCookie("seller_id",webim.seller_id,24*7);
                     // 数据存入会话（不考虑执行的结果）,todo:邮箱错误
-                    $.post( 'cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2findexX2ephpX3frX3dInquiryX2fWebIMSave',
+                    $.post( '/index.php?r=Inquiry/WebIMSave',
                         {
                             pid           : webim.pinfo.pid,
                             sendermail    : webim.chat_info.chat_info_email,
@@ -567,7 +567,7 @@ window.webim = {
                 //开始聊天后缓存买家id
                 webim.setCookie("seller_id",webim.seller_id,24*7);
                 // 数据存入会话（不考虑执行的结果）,todo:邮箱错误
-                $.post( 'cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2findexX2ephpX3frX3dInquiryX2fWebIMSave',
+                $.post( '/index.php?r=Inquiry/WebIMSave',
                     {
                         pid           : webim.pinfo.pid,
                         sendermail    : webim.chat_info.chat_info_email,
@@ -1306,12 +1306,12 @@ $(document).ready(function(){
         if ( webim.config.device == 1 )
         {
             // 如果是移动版
-            webim.config.pop_info_url = "cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fwebimX2fpopX5finfoX5fmobile2X2ehtml";
-            webim.config.pop_chat_url = "cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fwebimX2fpopX5fchatX5fmobile2X2ehtml";
+            webim.config.pop_info_url = "pop_info_mobile2.html";
+            webim.config.pop_chat_url = "pop_chat_mobile2.html";
         }
         else
-        {   webim.config.pop_info_url = "cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fwebimX2fpopX5finfo2X2ehtml";
-            webim.config.pop_chat_url = "cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fwebimX2fpopX5fchat2X2ehtml";
+        {   webim.config.pop_info_url = "pop_info2.html";
+            webim.config.pop_chat_url = "pop_chat2.html";
         }
 
         //设置appid

@@ -543,7 +543,7 @@ game_util.add_fav = function (url, title) {
         if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0)return 2;
         if (isSafari = navigator.userAgent.indexOf("Safari") > 0)return 3;
         if (isCamino = navigator.userAgent.indexOf("Camino") > 0)return 4;
-        if (isMozilla = navigator.userAgent.indexOf("cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fGeckoX2f") > 0)return 5;
+        if (isMozilla = navigator.userAgent.indexOf("Gecko/") > 0)return 5;
         return 0;
     }
 

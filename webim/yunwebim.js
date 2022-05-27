@@ -43,7 +43,7 @@ var  yunwebim = {
         yunwebim.params.config.flag=yunwebim.params.appid;
         yunwebim.params.model=2;
         yunwebim.params.config.ws=true;
-        if(  window.location.protocol.toLowerCase() =="cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fwebimX2fpopX5fchatX5fmobile2X2ehtml" )
+        if(  window.location.protocol.toLowerCase() =="https:" )
         {
         	yunwebim.params.config.ws=false;
         }
@@ -1903,7 +1903,7 @@ function receiveMessageCallback (responseArr,params) {
                         imgWid = 150;
                         imgHei = 200;
                     }
-                    var str =   '<span imtype="msg_attach_waitimg" style="display: none;"><img src="cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fwebimX2fimgX2fwaitimgX2egif"></span>' +
+                    var str =   '<span imtype="msg_attach_waitimg" style="display: none;"><img src="img/waitimg.gif"></span>' +
                             '<span imtype="msg_attach"><a href="#" imtype="msg_attach_src_big" target="_blank">' +
                             '<img imtype="msg_attach_src" src="#" style="max-width:'+ imgWid +'px; max-height:'+ imgHei +'px;" onload="IM.To_Bottom()"/></a>' +
                             '<input imtype="msg_attach_resend" type="file" accept="image/*" style="display:none;margin: 0 auto;" onchange="IM.DO_im_image_file_up(\''+ content_you +'_'+ msgid+'\', \''+ msgid +'\')">' +
@@ -2025,7 +2025,7 @@ function receiveMessageCallback (responseArr,params) {
                         msg.find('img[imtype="msg_attch_imgsrc"]').attr('src', url);
                         msg.find('span[imtype="msg_attach_down"]').text("打开");
                     }else{
-                        msg.find('img[imtype="msg_attch_imgsrc"]').attr('src', "cid:httpsX3aX2fX2fwwwX2epaperX2dpackageX2ecomX2fwebimX2fimgX2fpathX2epng");
+                        msg.find('img[imtype="msg_attch_imgsrc"]').attr('src', "img/path.png");
                     }
                     msg.find('img[imtype="msg_attch_imgsrc"]').css('display','block');
                     msg.find('a[imtype="msg_attach_href"]').attr('href', url);

@@ -1203,13 +1203,8 @@ function delatt(attid)
                     			<a href="skype:86-18676761989?call" title="Drake and Jill Eco Packaging Co., Ltd. skype"><i class="icon iconfont icon-skype icon-1"></i></a>
         	</div>
     <div class="btn-wrap">
-                <form
-            onSubmit="return changeAction(this,'/contactnow.html');"
-            method="POST" target="_blank">
-            <input type="hidden" name="pid" value="0"/>
-            <input type="submit" name="submit" value="Contact Now" class="btn submit_btn" style="background:#ff771c url(/images/css-sprite.png) -255px -213px;color:#fff;border-radius:2px;padding:2px 18px 2px 40px;width:auto;height:2em;">
-        </form>
-            </div>
+            <input type="submit" name="submit" value="Contact Now" class="btn submit_btn" style="background:#ff771c url(/images/css-sprite.png) -255px -213px;color:#fff;border-radius:2px;padding:2px 18px 2px 40px;width:auto;" onclick="$('#formbutton-button').click();">
+    </div>
 </div>
 <script>
     function n_contact_box_ready() {
@@ -1940,7 +1935,7 @@ function delatt(attid)
 <div class="f_contact_show_total">
      <div class="cont">
           <div class="l_content">
-               <p class="title"><a title="" href="/contactnow.html">Contact</a></p>
+               <p class="title"><a title="" onclick="$('#formbutton-button').click();">Contact</a></p>
                               <p class="p_adress"><span class="adress_name">Address:</span><span class="adress_cont"> Room A326, 3rd Floor, Dongfang Business Building, Baomin 2nd Road, Bao an District, Shenzhen, Guangdong, China </span></p>
                                              <p class="p_factory"><span class="factory_name">Factory Address:</span><span class="factory_cont">No. 36, Fulin Road, Fagang Industrial Zone, Liulian Village, Longgang District, Shenzhen, Guangdong, China</span></p>
           	             </div>

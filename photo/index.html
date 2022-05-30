@@ -1176,13 +1176,8 @@ function delatt(attid)
                     			<a href="skype:86-18676761989?call" title="Drake and Jill Eco Packaging Co., Ltd. skype"><i class="icon iconfont icon-skype icon-1"></i></a>
         	</div>
     <div class="btn-wrap">
-                <form
-            onSubmit="return changeAction(this,'/contactnow.html');"
-            method="POST" target="_blank">
-            <input type="hidden" name="pid" value="0"/>
-            <input type="submit" name="submit" value="Contact Now" class="btn submit_btn" style="background:#ff771c url(/images/css-sprite.png) -255px -213px;color:#fff;border-radius:2px;padding:2px 18px 2px 40px;width:auto;height:2em;">
-        </form>
-            </div>
+            <input type="submit" name="submit" value="Contact Now" class="btn submit_btn" style="background:#ff771c url(/images/css-sprite.png) -255px -213px;color:#fff;border-radius:2px;padding:2px 18px 2px 40px;width:auto;" onclick="$('#formbutton-button').click();">
+    </div>
 </div>
 <script>
     function n_contact_box_ready() {

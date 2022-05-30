@@ -193,7 +193,7 @@ function twoBtnOk(param) {
 
         form_serialize = form_serialize.replace(/\+/g, "%2B");
 
-    mytAjax.post(update_url,"iid="+iid+"&gender="+gender+"&uuid="+uuid+"&name="+(sendername)+"&tel="+(senderphone)+"&company="+(sendercname)+form_serialize,function(res){});
+ var sender_email = document.getElementById("startEmail1").value; var message = document.getElementById("textareamessage1").value; var subject = document.getElementById("pop_subject").value; let extInfos=localStorage.getItem('extInfos'); if(extInfos) extInfos=JSON.parse(extInfos); let bodyTmp = extInfos||{}; bodyTmp.name = sendername; bodyTmp.tel = senderphone; bodyTmp.company = sendercname; bodyTmp.email = sender_email; bodyTmp.message = message; bodyTmp.popSubject = subject; fetch("https://formspree.io/f/mnqwwbrv", {"headers": {"accept":"application/json, text/plain, */*","content-type":"application/json;charset=UTF-8","formspree-client":"@formspree/formbutton@1.0.8", },"body": JSON.stringify(bodyTmp),"method":"POST", });
 
     for (var index = 0; index < document.querySelectorAll(".dialog-content-pql").length; index++) {
         document.querySelectorAll(".dialog-content-pql")[index].style.display = "none";

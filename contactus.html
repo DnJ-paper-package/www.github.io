@@ -21,7 +21,7 @@ var customtplcolor = 99335;
 <body>
 	<div id="floatAd" style="width:115px; z-index: 99999;position:absolute;right:40px;bottom:60px;
 	height:79px;		">
-		<form method="post"
+		<form method="get"
 		      onSubmit="return changeAction(this,'/contactnow.html');">
 			<input type="hidden" name="pid" value=""/>
 			<input alt='Send Message' onclick="this.blur()" type="image"
@@ -978,7 +978,7 @@ function delatt(attid)
                     <li class="gnav cur">
                         <a title="" href="/contactus.html">Contact Us</a>                    </li>
                     <li class="gnav">
-                        <form id="f_header_nav_form" method="post">
+                        <form id="f_header_nav_form" method="get">
                             <input type="hidden" name="pid" value=""/>
                             <div class="a"><span onclick="document.getElementById('f_header_nav_form').action='/contactnow.html';document.getElementById('f_header_nav_form').submit();">Request A Quote</span></div>
                         </form>
@@ -1007,7 +1007,7 @@ function delatt(attid)
                     <li class="gnav cur">
                         <a title="" href="/contactus.html">Contact Us</a>                    </li>
                     <li class="gnav">
-                        <form id="f_header_nav_form" method="post">
+                        <form id="f_header_nav_form" method="get">
                             <input type="hidden" name="pid" value=""/>
                             <div class="a"><span onclick="document.getElementById('f_header_nav_form').action='/contactnow.html';document.getElementById('f_header_nav_form').submit();">Request A Quote</span></div>
                         </form>
@@ -1246,7 +1246,7 @@ function delatt(attid)
                     <div class="ri">
                         <b>Send your inquiry directly to us</b><br>
 
-                        <form method="post"
+                        <form method="get"
                               action="/contactnow.html"
                               onsubmit="return jsSubmit(this);" target="_blank">
                             <input type="hidden" name="from" value="1"/>
@@ -1390,7 +1390,7 @@ function delatt(attid)
                 			</div>
 		</div>
 		<div class="ri">
-			<form method="post"
+			<form method="get"
 				  action="/contactnow.html"
 				  onsubmit="return jsSubmit(this);" target="_blank">
 				<input type="hidden" name="from" value="1"/>

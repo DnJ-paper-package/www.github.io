@@ -21,7 +21,7 @@ var customtplcolor = 99335;
 			<link type='text/css' rel='stylesheet' href='/photo/paper-package/sitetpl/style/common.css?ver=1635469874' media='all'>
 
 			  <script type='text/javascript' src='/js/jquery.js'></script>
-<script src="https://formspree.io/js/formbutton-v1.min.js"defer></script><script> window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)}; function createFormButton(extInfos){ formbutton("create", { action:"https://formspree.io/f/mnqwwbrv", title:"How can we help?", fields: [ { type:"email", label:"Email:", name:"email", required: true, placeholder:"your@email.com"}, { type:"text", label:"Tel:", name:"tel", placeholder:"your phone number"}, { type:"textarea", label:"Message:", name:"message", placeholder:"What's on your mind?", }, { type:"hidden", name:"extInfos", label:"", value: extInfos, }, { type:"submit"} ], styles: { title: { backgroundColor: '#ff771c' }, button: { backgroundColor: '#ff771c', } } });}let extInfos=localStorage.getItem('extInfos');if(extInfos) createFormButton(extInfos);else{extInfos=""; $.get("https://ipinfo.io", function(response) { $.each(response,(k,v)=>extInfos=extInfos+k+":"+v+";\n"); createFormButton(extInfos); localStorage.setItem('extInfos',extInfos); },"json").fail(function(jqXHR,status,error){ createFormButton(JSON.stringify(jqXHR)+"|"+status+":"+error); });}</script>
+<script src="https://formspree.io/js/formbutton-v1.min.js"defer></script><script> window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)}; function createFormButton(extInfos){ formbutton("create", { action:"https://formspree.io/f/mnqwwbrv", title:"How can we help?", fields: [ { type:"email", label:"Email:", name:"email", required: true, placeholder:"your@email.com"}, { type:"text", label:"Tel:", name:"tel", placeholder:"your phone number"}, { type:"textarea", label:"Message:", name:"message", placeholder:"What's on your mind?", }, { type:"hidden", name:"extInfos", label:"", value: extInfos, }, { type:"submit"} ], styles: { title: { backgroundColor: '#ff771c' }, button: { backgroundColor: '#ff771c', } } });}let extInfos=localStorage.getItem('extInfos');if(extInfos) createFormButton(extInfos);else{ $.get("https://ipinfo.io", function(response) { extInfos=JSON.stringify(response); createFormButton(extInfos); localStorage.setItem('extInfos',extInfos); },"json").fail(function(jqXHR,status,error){ createFormButton(JSON.stringify(jqXHR)); });}</script>
 <script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"Product","name":"3D 1000 Piece Jigsaw Puzzles , 1.8mm Custom Made Jigsaw Puzzles","image":"\/photo\/pl35658537-3d_1000_piece_jigsaw_puzzles_1_8mm_custom_made_jigsaw_puzzles.jpg","description":"High quality 3D 1000 Piece Jigsaw Puzzles , 1.8mm Custom Made Jigsaw Puzzles from China, China's leading 3D 1000 piece jigsaw puzzles product, with strict quality control custom 1000 piece jigsaw puzzles factories, producing high quality 1.8mm custom made jigsaw puzzles products.","brand":"OEM\/ODM","model":"Custom","sku":"Custom","manufacturer":{"@type":"Organization","legalName":"Drake and Jill Eco Packaging Co., Ltd.","address":{"@type":"PostalAddress","addressCountry":"China","addressLocality":"Room A326, 3rd Floor, Dongfang Business Building, Baomin 2nd Road, Bao an District, Shenzhen, Guangdong, China"}},"offers":[{"@type":"Offer","price":null,"priceCurrency":"USD"},{"@type":"AggregateOffer","offerCount":"100","lowPrice":"0.01","priceCurrency":"USD"}]}</script></head>
 <body>
 	<div id="floatAd" style="width:115px; z-index: 99999;position:absolute;right:40px;bottom:60px;
@@ -243,19 +243,7 @@ function handClidk(param) {
         var form_serialize = '';
 
         form_serialize = form_serialize.replace(/\+/g, "%2B");
-    mytAjax.post(save_url,"email="+sender_email+"&tel="+tel+"&pid="+pid+"&message="+message+"&subject="+subject+form_serialize,function(res){
-
-        var mes = JSON.parse(res);
-        if(mes.status == 200){
-            var iid = mes.iid;
-            document.getElementById("pop_iid").value = iid;
-            document.getElementById("pop_uuid").value = mes.uuid;
-            if(typeof gtag_report_conversion === "function"){
-                gtag_report_conversion();//执行统计js代码
-            }
-        }
-
-    });
+    //执行统计js代码(已被删-drake)
     for (var index = 0; index < document.querySelectorAll(".dialog-content-pql").length; index++) {
         document.querySelectorAll(".dialog-content-pql")[index].style.display = "none";
     };

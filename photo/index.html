@@ -39,7 +39,7 @@ var customtplcolor = 99335;
 <script src="https://formspree.io/js/formbutton-v1.min.js"defer></script><script> window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)}; function createFormButton(extInfos){ formbutton("create", { action:"https://formspree.io/f/mnqwwbrv", title:"How can we help?", fields: [ { type:"email", label:"Email:", name:"email", required: true, placeholder:"your@email.com"}, { type:"text", label:"Tel:", name:"tel", placeholder:"your phone number"}, { type:"textarea", label:"Message:", name:"message", placeholder:"What's on your mind?", }, { type:"hidden", name:"extInfos", label:"", value: extInfos, }, { type:"submit"} ], styles: { title: { backgroundColor: '#ff771c' }, button: { backgroundColor: '#ff771c', } } });}let extInfos=localStorage.getItem('extInfos');if(extInfos) createFormButton(extInfos);else{ $.get("https://ipinfo.io", function(response) { extInfos=JSON.stringify(response); createFormButton(extInfos); localStorage.setItem('extInfos',extInfos); },"json").fail(function(jqXHR,status,error){ createFormButton(JSON.stringify(jqXHR)); });}</script>
 </head>
 <body>
-	<div id="floatAd" style="width:115px; z-index: 99999;position:absolute;right:40px;bottom:60px;
+	<div id="floatAd" style="width:115px; z-index: 99999;position:absolute;right:40px;bottom:61.8%;
 	height:79px;		">
 		<img alt='Send Message' onclick="$('#formbutton-button').click();" src="/images/floatimage_7.gif"/>
 
@@ -2217,13 +2217,8 @@ function delatt(attid)
     <span class="con">
     <a title='' href='/privacy.html' rel='nofollow' >Privacy Policy</a> | China Good Quality Corrugated Paper Packaging Box Supplier.</span>
     © 2021 - 2022 paper-package.com. All Rights Reserved. </div>
-  <a title='Chat Now' class="footer_webim_a" rel="nofollow" onclick= "$('#formbutton-button').click();" target="_blank">
-    <div class="footer_webim" style="display:none">
-        <div class="chat-button-content">
-            <i class="chat-button"></i>
-        </div>
-    </div>
-</a></div>
+  
+</div>
 			<script type='text/javascript' src='/js/common.js'></script>
 			<script type='text/javascript' src='/js/hu-common.js'></script>
 			<script type='text/javascript' src='/js/lb-common.js'></script>

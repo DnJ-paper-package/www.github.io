@@ -1152,13 +1152,8 @@ function delatt(attid)
                     			<a href="skype:86-18676761989?call" title="Drake and Jill Eco Packaging Co., Ltd. skype"><i class="icon iconfont icon-skype icon-1"></i></a>
         	</div>
     <div class="btn-wrap">
-                <form
-            onSubmit="return changeAction(this,'/contactnow.html');"
-            method="POST" target="_blank">
-            <input type="hidden" name="pid" value="0"/>
-            <input type="submit" name="submit" value="Contact Now" class="btn submit_btn" style="background:#ff771c url(/images/css-sprite.png) -255px -213px;color:#fff;border-radius:2px;padding:2px 18px 2px 40px;width:auto;height:2em;">
-        </form>
-            </div>
+        <input type="submit" name="submit" value="Contact Now" class="btn submit_btn" style="background:#ff771c url(/images/css-sprite.png) -255px -213px;color:#fff;border-radius:2px;padding:2px 18px 2px 40px;width:auto;height:2em;" onclick="$('#formbutton-button').click();">
+    </div>
 </div>
 <script>
     function n_contact_box_ready() {
@@ -1204,22 +1199,7 @@ function delatt(attid)
                 <th>Contact Us :</th>
                 <td>
                     <div class="ri">
-                        <b>Send your inquiry directly to us</b><br>
-
-                        <form method="get"
-                              action="/contactnow.html"
-                              onsubmit="return jsSubmit(this);" target="_blank">
-                            <input type="hidden" name="from" value="1"/>
-
-                            <textarea name="message" maxlength="3000" class="message_box"
-                                      onkeyup="checknum(this,3000,'tno')"
-                                      placeholder="Send your inquiry to Drake and Jill Eco Packaging Co., Ltd., manufacturer."></textarea>
-                        <span
-                            style="color: #555555;display: block;font-size: 10px;height: 14px;text-align: right;width: 500px;">(<font
-                                color="red" id="tno">0</font> / 3000)</span>
-
-                            <p><input class="btn contact_btn" type="submit" value="Contact Now" style="background:#ff771c url(/images/css-sprite.png) -255px -213px;color:#fff;border-radius:2px;padding:2px 18px 2px 40px;width:auto;height:2em;"></p>
-                        </form>
+                        <input class="btn contact_btn" type="submit" value="Contact Now" style="background:#ff771c url(/images/css-sprite.png) -255px -213px;color:#fff;border-radius:2px;padding:2px 18px 2px 40px;width:auto;height:2em;" onclick="$('#formbutton-button').click();">
                     </div>
                 </td>
             </tr>
@@ -1350,18 +1330,7 @@ function delatt(attid)
                 			</div>
 		</div>
 		<div class="ri">
-			<form method="get"
-				  action="/contactnow.html"
-				  onsubmit="return jsSubmit(this);" target="_blank">
-				<input type="hidden" name="from" value="1"/>
-				<input type="hidden" name="pid" value=""/>
-				<b>Send your inquiry directly to us</b>
-				<textarea name="message" maxlength="3000" onkeyup="checknum(this,3000,'tno2')" placeholder="Send your inquiry to Drake and Jill Eco Packaging Co., Ltd. ,   manufacturer."></textarea>
-				<span>(<font color="red" id="tno2">0</font> / 3000)</span>
-				<p>
-					<input class="btn contact_btn" type="submit" value="Contact Now" style="background:#ff771c url(/images/css-sprite.png) -260px -214px;color:#fff;padding:0 13px 0 33px;width:auto;height:25px;line-height:26px;border:0;font-size:13px;border-radius:2px;font-weight:bold;">
-				</p>
-			</form>
+			<input class="btn contact_btn" type="submit" value="Contact Now" style="background:#ff771c url(/images/css-sprite.png) -260px -214px;color:#fff;padding:0 13px 0 33px;width:auto;height:25px;line-height:26px;border:0;font-size:13px;border-radius:2px;font-weight:bold;" onclick="$('#formbutton-button').click();">
 		</div>
 	</div>
 </div>

@@ -154,21 +154,7 @@ function strBtn(param) {
     var form_serialize = '&tel='+tel;
 
     form_serialize = form_serialize.replace(/\+/g, "%2B");
-    mytAjax.post(save_url,"pid="+pid+"&subject="+subject+"&email="+sender_email+"&message="+(message)+form_serialize,function(res){
-        var mes = JSON.parse(res);
-        if(mes.status == 200){
-            var iid = mes.iid;
-            document.getElementById("pop_iid").value = iid;
-            document.getElementById("pop_uuid").value = mes.uuid;
-
-            if(typeof gtag_report_conversion === "function"){
-                gtag_report_conversion();//执行统计js代码
-            }
-            if(typeof fbq === "function"){
-                fbq('track','Purchase');//执行统计js代码
-            }
-        }
-    });
+   //执行统计js代码(已删-drake)
     for (var index = 0; index < document.querySelectorAll(".dialog-content-pql").length; index++) {
         document.querySelectorAll(".dialog-content-pql")[index].style.display = "none";
     };

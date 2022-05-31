@@ -46,20 +46,20 @@ function GetRequest(urlStr) {
 if(  window.location.protocol.toLowerCase() =="https:" )
 {
     window.webim_chat_params_config={
-        loadserver : "https://imlogin."+uurl+":8081/msg_server", //负载服务地址
+        loadserver : //imlogin."+uurl+":8081/msg_server", //负载服务地址
         appid : "10001",//appid
-        imgserver : "https://impic."+uurl+":8701",//http图片服务器
-        fileserver : "https://impic."+uurl+":8701",//http文件服务器
+        imgserver : //impic."+uurl+":8701",//http图片服务器
+        fileserver : //impic."+uurl+":8701",//http文件服务器
         jsfile   : "inline.js",
     };
 }
 else
 {
     window.webim_chat_params_config={
-        loadserver : "http://imlogin."+uurl+":8080/msg_server", //负载服务地址
+        loadserver : //imlogin."+uurl+":8080/msg_server", //负载服务地址
         appid : "10001",//appid
-        imgserver : "http://impic."+uurl+":8700",//http图片服务器
-        fileserver : "http://impic."+uurl+":8700",//http文件服务器
+        imgserver : //impic."+uurl+":8700",//http图片服务器
+        fileserver : //impic."+uurl+":8700",//http文件服务器
         jsfile   : "block.js",
     };
 }
@@ -71,8 +71,8 @@ window.webim = {
     is_init : 0,//是否已经初始化过聊天
     is_new  : 2,//是否是新版(1为旧版2为新版)
     chat_type : 0,//1音频2视频
-    jsserver  : "https://litechat."+uurl,//js域名
-    imapi     : "https://imapi."+uurl+":8401",//注册域名
+    jsserver  : //litechat."+uurl,//js域名
+    imapi     : //imapi."+uurl+":8401",//注册域名
     is_ecerurl : 0,//是否为行业站网站引入的页面
     ecer_account : 0,//行业站跳转释放带有邮箱/手机号
     //首页是否要悬浮框
@@ -1258,7 +1258,7 @@ window.webim = {
             window.location.host == "www.jpbrandoor.com" ||
             window.location.host == "m.manometerthermometer.com" ||
             window.location.host == "www.manometerthermometer.com"){
-            webim.imapi    = "https://imtestapi."+uurl+":8401";
+            webim.imapi    = //imtestapi."+uurl+":8401";
         }
     },
 

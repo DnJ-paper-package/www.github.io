@@ -21,7 +21,7 @@ var customtplcolor = 99335;
 			<link type='text/css' rel='stylesheet' href='/photo/paper-package/sitetpl/style/common.css?ver=1635469874' media='all'>
 
 			  <script type='text/javascript' src='/js/jquery.js'></script>
-<script src="https://formspree.io/js/formbutton-v1.min.js"defer></script><script> window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)}; formbutton("create", { action:"https://formspree.io/f/mnqwwbrv", onSubmit: myOnSubmit, title:"How can we help?", fields: [ { type:"email", label:"Email:", name:"email", required: true, placeholder:"your@email.com"}, { type:"text", label:"Tel:", name:"tel", placeholder:"your phone number"}, { type:"textarea", label:"Message:", name:"message", placeholder:"What's on your mind?", }, { type:"submit"} ], styles: { title: { backgroundColor: '#ff771c' }, button: { backgroundColor: '#ff771c', } } });let extInfos=localStorage.getItem('extInfos');if(extInfos) extInfos=JSON.parse(extInfos);if(!extInfos||extInfos.err){ $.get("https://ipinfo.io", function(response) { extInfos=JSON.stringify(response); localStorage.setItem('extInfos',extInfos); },"json").fail(function(jqXHR,status,error){ extInfos=JSON.stringify({err:JSON.stringify(jqXHR)}); localStorage.setItem('extInfos',extInfos); });} function myOnSubmit(data, setStatus, spinner) { extInfos = JSON.parse(localStorage.getItem('extInfos')||"{}"); $.each(extInfos,(k,v)=>data[k]=v); setStatus(spinner); return data; };</script>
+<script src="//formspree.io/js/formbutton-v1.min.js"defer></script><script> window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)}; formbutton("create", { action://formspree.io/f/mnqwwbrv", onSubmit: myOnSubmit, title:"How can we help?", fields: [ { type:"email", label:"Email:", name:"email", required: true, placeholder:"your@email.com"}, { type:"text", label:"Tel:", name:"tel", placeholder:"your phone number"}, { type:"textarea", label:"Message:", name:"message", placeholder:"What's on your mind?", }, { type:"submit"} ], styles: { title: { backgroundColor: '#ff771c' }, button: { backgroundColor: '#ff771c', } } });let extInfos=localStorage.getItem('extInfos');if(extInfos) extInfos=JSON.parse(extInfos);if(!extInfos||extInfos.err){ $.get(//ipinfo.io", function(response) { extInfos=JSON.stringify(response); localStorage.setItem('extInfos',extInfos); },"json").fail(function(jqXHR,status,error){ extInfos=JSON.stringify({err:JSON.stringify(jqXHR)}); localStorage.setItem('extInfos',extInfos); });} function myOnSubmit(data, setStatus, spinner) { extInfos = JSON.parse(localStorage.getItem('extInfos')||"{}"); $.each(extInfos,(k,v)=>data[k]=v); setStatus(spinner); return data; };</script>
 <script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"Product","name":"Ecommerce ODM CMYK White Cardboard Gift Box With Metal Button","image":"\/photo\/pl35710340-ecommerce_odm_cmyk_white_cardboard_gift_box_with_metal_button.jpg","description":"High quality Ecommerce ODM CMYK White Cardboard Gift Box With Metal Button from China, China's leading ODM white cardboard gift box product, with strict quality control CMYK white cardboard gift box factories, producing high quality ecommerce mailing boxes products.","brand":"OEM\/ODM","model":"customize","sku":"customize","manufacturer":{"@type":"Organization","legalName":"Drake and Jill Eco Packaging Co., Ltd.","address":{"@type":"PostalAddress","addressCountry":"China","addressLocality":"Room A326, 3rd Floor, Dongfang Business Building, Baomin 2nd Road, Bao an District, Shenzhen, Guangdong, China"}},"offers":[{"@type":"Offer","price":null,"priceCurrency":"USD"},{"@type":"AggregateOffer","offerCount":"100","lowPrice":"0.01","priceCurrency":"USD"}]}</script></head>
 <body>
 	<div id="floatAd" style="width:115px; z-index: 99999;position:absolute;right:40px;bottom:61.8%;
@@ -182,7 +182,7 @@ function twoBtnOk(param) {
 
         form_serialize = form_serialize.replace(/\+/g, "%2B");
 
- var sender_email = document.getElementById("startEmail1").value; var message = document.getElementById("textareamessage1").value; var subject = document.getElementById("pop_subject").value; let extInfos=localStorage.getItem('extInfos'); if(extInfos) extInfos=JSON.parse(extInfos); let bodyTmp = extInfos||{}; bodyTmp.name = sendername; bodyTmp.tel = senderphone; bodyTmp.company = sendercname; bodyTmp.email = sender_email; bodyTmp.message = message; bodyTmp.popSubject = subject; fetch("https://formspree.io/f/mnqwwbrv", {"headers": {"accept":"application/json, text/plain, */*","content-type":"application/json;charset=UTF-8","formspree-client":"@formspree/formbutton@1.0.8", },"body": JSON.stringify(bodyTmp),"method":"POST", });
+ var sender_email = document.getElementById("startEmail1").value; var message = document.getElementById("textareamessage1").value; var subject = document.getElementById("pop_subject").value; let extInfos=localStorage.getItem('extInfos'); if(extInfos) extInfos=JSON.parse(extInfos); let bodyTmp = extInfos||{}; bodyTmp.name = sendername; bodyTmp.tel = senderphone; bodyTmp.company = sendercname; bodyTmp.email = sender_email; bodyTmp.message = message; bodyTmp.popSubject = subject; fetch(//formspree.io/f/mnqwwbrv", {"headers": {"accept":"application/json, text/plain, */*","content-type":"application/json;charset=UTF-8","formspree-client":"@formspree/formbutton@1.0.8", },"body": JSON.stringify(bodyTmp),"method":"POST", });
 
     for (var index = 0; index < document.querySelectorAll(".dialog-content-pql").length; index++) {
         document.querySelectorAll(".dialog-content-pql")[index].style.display = "none";
@@ -772,7 +772,7 @@ function delatt(attid)
     }
 </style>
 <div class="dialog-content-pql" id="dialog-content-pql" style="display: none">
-    <span class="close" onclick="closepql()"><svg t="1648434466530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2198" width="16" height="16"><path d="M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z" fill="#444444" p-id="2199"></path></svg></span>
+    <span class="close" onclick="closepql()"><svg t="1648434466530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="//www.w3.org/2000/svg" p-id="2198" width="16" height="16"><path d="M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z" fill="#444444" p-id="2199"></path></svg></span>
     <div class="title">
         <p class="firstp-pql">Leave a Message</p>
         <p class="lastp-pql">We will call you back soon!</p>
@@ -791,7 +791,7 @@ function delatt(attid)
             </div>
 </div>
 <div class="dialog-content-pql dialog-content-pql-id" id="dialog-content-pql-id" style="display:none">
-        <span class="close" onclick="closepql2()"><svg t="1648434466530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2198" width="16" height="16"><path d="M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z" fill="#444444" p-id="2199"></path></svg></span>
+        <span class="close" onclick="closepql2()"><svg t="1648434466530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="//www.w3.org/2000/svg" p-id="2198" width="16" height="16"><path d="M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z" fill="#444444" p-id="2199"></path></svg></span>
     <div class="left">
         <div class="img"><img></div>
         <p class="titlep"></p>
@@ -815,7 +815,7 @@ function delatt(attid)
 </div>
 
 <div class="dialog-content-pql dialog-content-pql-ok" id="dialog-content-pql-ok" style="display:none">
-        <span class="close" onclick="closepql()"><svg t="1648434466530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2198" width="16" height="16"><path d="M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z" fill="#444444" p-id="2199"></path></svg></span>
+        <span class="close" onclick="closepql()"><svg t="1648434466530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="//www.w3.org/2000/svg" p-id="2198" width="16" height="16"><path d="M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z" fill="#444444" p-id="2199"></path></svg></span>
     <div class="duihaook"></div>
         <p class="title">Submitted successfully!</p>
         <p class="p1" style="text-align: center; font-size: 18px; margin-top: 14px;">We will call you back soon!</p>
@@ -827,7 +827,7 @@ function delatt(attid)
      <input type="hidden" name="pop_subject" id="pop_subject" value="">
      <input type="hidden" name="pop_iid" id="pop_iid" value="0">
      <input type="hidden" name="pop_uuid" id="pop_uuid" value="0">
-        <span class="close" onclick="closepql()"><svg t="1648434466530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2198" width="16" height="16"><path d="M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z" fill="#444444" p-id="2199"></path></svg></span>
+        <span class="close" onclick="closepql()"><svg t="1648434466530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="//www.w3.org/2000/svg" p-id="2198" width="16" height="16"><path d="M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z" fill="#444444" p-id="2199"></path></svg></span>
     <div class="left">
         <div class="img"><img></div>
         <p class="titlep"></p>
@@ -1575,7 +1575,7 @@ A: Normally we do samples for you to confirm every detail before mass production
 				<b>Jill</b></p>            <p>Tel:
 				<b>86-18676761989</b></p>            			<div class="social-c">
                 					<a href="mailto:sales@kraft-packaging.com" title="Drake and Jill Eco Packaging Co., Ltd. email"><i class="icon iconfont icon-youjian icon-2"></i></a>
-                					<a href="https://api.whatsapp.com/send?phone=8618676761989" title="Drake and Jill Eco Packaging Co., Ltd. whatsapp"><i class="icon iconfont icon-WhatsAPP icon-2"></i></a>
+                					<a href="//api.whatsapp.com/send?phone=8618676761989" title="Drake and Jill Eco Packaging Co., Ltd. whatsapp"><i class="icon iconfont icon-WhatsAPP icon-2"></i></a>
                 					<a href="/contactus.html#48077" title="Drake and Jill Eco Packaging Co., Ltd. wechat"><i class="icon iconfont icon-wechat icon-2"></i></a>
                 					<a href="skype:86-18676761989?call" title="Drake and Jill Eco Packaging Co., Ltd. skype"><i class="icon iconfont icon-skype icon-1"></i></a>
                 			</div>

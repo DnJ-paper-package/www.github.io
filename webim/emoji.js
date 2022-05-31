@@ -2529,8 +2529,8 @@ function emoji(){}
 	// a CDN for your sheets and img files
 
 	/*
-	emoji.img_sets['google']['path'] = 'http://cdn.example.com/emoji/';
-	emoji.img_sets['google']['sheet'] = 'http://cdn.example.com/emoji/sheet_google_64.png';
+	emoji.img_sets['google']['path'] = //cdn.example.com/emoji/';
+	emoji.img_sets['google']['sheet'] = //cdn.example.com/emoji/sheet_google_64.png';
 	*/
 
 });

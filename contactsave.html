@@ -49,7 +49,7 @@ $.get("https://ipinfo.io", function(response) {
 function getPlusData(data) {
 	let infos = extInfos || {};
 	$.each(infos, (k,v)=>data[k] = v);
-	data.href = location.href;
+	data.websiteTitle = document.title;
 	return data;
 }
 function myOnSubmit(data, setStatus, spinner) {

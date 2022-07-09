@@ -182,10 +182,12 @@ $.get("https://ipinfo.io", function(response) {
  extInfos={err:JSON.stringify(jqXHR)};
  localStorage.setItem('extInfos',JSON.stringify(extInfos));
 });
+let inTime = Date.now();
 function getPlusData(data) {
 	let infos = extInfos || {};
 	$.each(infos, (k,v)=>data[k] = v);
 	data.websiteTitle = document.title;
+	data.duration = (Date.now() - inTime)/1000 + 's';
 	return data;
 }
 function myOnSubmit(data, setStatus, spinner) {

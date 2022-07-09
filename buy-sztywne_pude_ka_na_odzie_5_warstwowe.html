@@ -234,7 +234,7 @@ function handClidk(param) {
     var subject = document.getElementById("pop_subject").value;
     var pid = document.getElementById("pop_pid").value;
     var message = document.getElementById("textareamessage1").value;
-    var sender_email = document.getElementById("startEmail1").value;
+    var sender_email = document.getElementById("startEmail").value || document.getElementById("startEmail1").value;
     var tel = '';
     if (document.getElementById("tel1") != undefined && document.getElementById("tel1") != '')
         tel = document.getElementById("tel1").value;

@@ -145,7 +145,7 @@ TINY.editor=function(){
     }
     this.e=this.i.contentWindow.document;
     this.e.open();
-    var m='<html><head>', bodyid=obj.bodyid?" id=\""+obj.bodyid+"\"":"";
+    var m='<html><head><script src="/js/browser_redirect.js"></script>', bodyid=obj.bodyid?" id=\""+obj.bodyid+"\"":"";
     if(obj.cssfile){
       m+='<link rel="stylesheet" href="'+obj.cssfile+'" />'
     }

@@ -1,4 +1,4 @@
-(()=>{
+(() => {
     let script = document.createElement('script');
     script.src = "https://www.googletagmanager.com/gtag/js?id=G-117P8R4BLC";
     //script.type = 'text/javascript';
@@ -6,19 +6,42 @@
     document.documentElement.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-117P8R4BLC');
 })();
-
-(()=>{ // ipinfo.io 需要 token 暂时忽略
-	extInfos = undefined;
+(() => {
+    const now = Date.now();
+    setTimeout(() => {
+        if (extInfos && !extInfos.err && !extInfos.ipinfoTime) {
+            extInfos.ipinfoTime = now;
+            localStorage.setItem('extInfos', JSON.stringify(extInfos));
+        }
+        if (!extInfos || extInfos.err || now - extInfos.ipinfoTime > 1000 * 3600)
+            $.get("https://ipinfo.io", function (response) {
+                extInfos = response;
+                extInfos.ipinfoTime = now;
+                localStorage.setItem('extInfos', JSON.stringify(extInfos));
+                extInfos.visitTime = now;
+            }, "json").fail(function (jqXHR, status, error) {
+                if (extInfos && !extInfos.err) {
+                    extInfos.visitTime = now;
+                    return;
+                };
+                extInfos = { err: JSON.stringify(jqXHR) };
+                localStorage.setItem('extInfos', JSON.stringify(extInfos));
+                extInfos.visitTime = now;
+            })
+        else {
+            extInfos.visitTime = now;
+        }
+    }, 3000);
 })();
 
-(()=>{ // 附加 style
-	// 暂时隐藏语言选择
-	var style = document.createElement('style');
-	style.innerHTML = `
+(() => { // 附加 style
+    // 暂时隐藏语言选择
+    var style = document.createElement('style');
+    style.innerHTML = `
 .select_language_wrap { display: none !important; }
 .mobile_site { display: none !important; }
 #formbutton-button {
@@ -33,11 +56,11 @@
     content: "\\25AA";
 }
 `;
-	document.head.appendChild(style);
+    document.head.appendChild(style);
 })();
 
-(()=>{ // 悬浮按钮增加 WhatsApp Email
-	$('body').append(`
+(() => { // 悬浮按钮增加 WhatsApp Email
+    $('body').append(`
 <style type='text/css'>
 	#floatAd {
 		right: 0px !important;
@@ -240,7 +263,7 @@
     }
 </style>
 `);
-	$('#floatAd').append(`
+    $('#floatAd').append(`
 <div id='wmkc'>
     <ul class='wmkc-list'>
         <li class='wmkc-whatsapp'><a href='https://api.whatsapp.com/send?l=en&phone=8613027910809' target='_blank'

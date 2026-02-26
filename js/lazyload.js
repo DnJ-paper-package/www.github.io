@@ -16,6 +16,9 @@
 .n_contact_box_2 .l_msy {
     height: unset;
 }
+.f_foot_all dl dd p:before {
+    content: "\\25AA";
+}
 `;
 	document.head.appendChild(style);
 })();

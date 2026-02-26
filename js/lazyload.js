@@ -1,3 +1,16 @@
+(()=>{
+    let script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-117P8R4BLC";
+    //script.type = 'text/javascript';
+    script.async = true;
+    document.documentElement.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-117P8R4BLC');
+})();
+
 (()=>{ // ipinfo.io 需要 token 暂时忽略
 	extInfos = undefined;
 })();

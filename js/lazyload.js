@@ -1,3 +1,77 @@
+location.hostname !== 'www.paper-package.com' && (()=>{
+    // wrap img src setter
+    const originalDescriptor = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+
+    Object.defineProperty(HTMLImageElement.prototype, 'src', {
+    set(value) {
+        // 在这里对 value 做你想要的替换
+        let newValue = value
+            .replace(location.hostname, 'www.paper-package.com');
+        if (!newValue.startsWith('//') && newValue.startsWith('/'))
+            newValue = '//www.paper-package.com' + newValue;
+        
+        //console.log(`原始 src: ${value}, 修改后 src: ${newValue}`);
+
+        // 调用原来的 setter 来继续加载图片
+        originalDescriptor.set.call(this, newValue);
+    },
+    get() {
+        return originalDescriptor.get.call(this);
+    },
+    configurable: true,
+    enumerable: true,
+    });
+
+    // 修正 img[rel]
+    $('img[rel]').each(function() {
+        let relValue = $(this).attr('rel');
+        // 自定义处理逻辑，比如替换某些字符
+        let newValue = relValue.replace(location.hostname, 'www.paper-package.com');
+        $(this).attr('rel', newValue);
+    });
+
+    // 删掉表单功能
+    $('#floatAd').children().first().remove();
+    $('.contact_btn').filter('a').remove();
+    $('.content_box').children().last().remove();
+    creatDialog = ()=>{};
+    $('#header_index').find('.gnb_navi').children().last().remove();
+    $('form').filter(function () {
+        return Array.from(this.attributes).some(attr =>
+            attr.value && attr.value.toLowerCase().includes('contactnow')
+        );
+    }).remove();
+
+    // 删掉 skype
+    $('a').each(function () {
+    if (this.outerHTML.toLowerCase().includes('skype')) {
+            $(this).remove();
+        }
+    });
+
+    // 首页轮播图片修正
+    $('.main_image').find('span').each(function () {
+        let style = $(this).attr('style');
+
+        if (style && style.includes(location.hostname)) {
+            const map = {
+                'cl35747921': 'cl35747921-corrugated_paper_packaging_box',
+                'cl35747996': 'cl35747996-custom_paper_packaging_box',
+                'cl35748110': 'cl35748110-paperboard_packaging_box',
+            };
+            const key = Object.keys(map).find(k=>style.includes(k));
+            if (!key) return;
+            const reg = new RegExp(`${location.hostname}/photo/${key}-.*\\.jpg`);
+            let newStyle = style.replace(
+                reg,
+                `www.paper-package.com/photo/${map[key]}.jpg`
+            );
+
+            $(this).attr('style', newStyle);
+        }
+    });
+})();
+
 (() => {
     let script = document.createElement('script');
     script.src = "https://www.googletagmanager.com/gtag/js?id=G-117P8R4BLC";
@@ -39,10 +113,10 @@
 })();
 
 (() => { // 附加 style
-    // 暂时隐藏语言选择
     var style = document.createElement('style');
     style.innerHTML = `
-.select_language_wrap { display: none !important; }
+// 暂时隐藏语言选择
+//.select_language_wrap { display: none !important; }
 .mobile_site { display: none !important; }
 #formbutton-button {
 	padding: 0px !important;

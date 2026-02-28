@@ -72,7 +72,8 @@ location.hostname !== 'www.paper-package.com' && (()=>{
     });
 })();
 
-(() => {
+!document.cookie.includes('exclude_me=20d36b44d6bae6e5b4df620b5e260a67')
+&& (() => {
     let script = document.createElement('script');
     script.src = "https://www.googletagmanager.com/gtag/js?id=G-117P8R4BLC";
     //script.type = 'text/javascript';

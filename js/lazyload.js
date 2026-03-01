@@ -88,7 +88,9 @@ location.hostname !== 'www.paper-package.com'
     gtag('js', new Date());
     gtag('config', 'G-117P8R4BLC');
 })();
-(() => {
+
+location.hostname === 'www.paper-package.com'
+&& (() => {
     const now = Date.now();
     setTimeout(() => {
         if (extInfos && !extInfos.err && !extInfos.ipinfoTime) {

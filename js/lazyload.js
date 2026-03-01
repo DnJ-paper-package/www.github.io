@@ -1,4 +1,5 @@
-location.hostname !== 'www.paper-package.com' && (()=>{
+location.hostname !== 'www.paper-package.com'
+&& (()=>{
     // wrap img src setter
     const originalDescriptor = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
 
@@ -42,9 +43,11 @@ location.hostname !== 'www.paper-package.com' && (()=>{
         );
     }).remove();
 
-    // 删掉 skype
+    // 删掉 a标签 中的 skype 和 contactnow
     $('a').each(function () {
-    if (this.outerHTML.toLowerCase().includes('skype')) {
+	    if ( this.outerHTML.toLowerCase().includes('skype')
+		  || this.outerHTML.toLowerCase().includes('contactnow')
+		) {
             $(this).remove();
         }
     });

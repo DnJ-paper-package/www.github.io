@@ -1,5 +1,4 @@
-location.hostname !== 'www.paper-package.com'
-&& (()=>{
+location.hostname !== 'www.paper-package.com' && (()=>{
     // wrap img src setter
     const originalDescriptor = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
 
@@ -51,6 +50,29 @@ location.hostname !== 'www.paper-package.com'
             $(this).remove();
         }
     });
+
+	// 删掉 Miss. Wang
+	if (location.href.includes('contactus')) {
+		const rows = document.querySelectorAll("tbody tr");
+		
+		let deleting = false;
+		
+		rows.forEach(row => {
+		    const td = row.querySelector("td");
+		
+		    if (td && td.textContent.trim() === "Miss. Wang") {
+		        deleting = true;
+		    }
+		
+		    if (deleting) {
+		        const isDivider = row.querySelector("td[colspan='2']");
+		        row.remove();
+		        if (isDivider) {
+		            deleting = false;
+		        }
+		    }
+		});
+	}
 
     // 首页轮播图片修正
     $('.main_image').find('span').each(function () {

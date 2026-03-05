@@ -114,6 +114,8 @@ location.hostname !== 'www.paper-package.com' && (()=>{
     script.src = "/js/human_verify.js";
     script.async = true;
     document.documentElement.appendChild(script);
+
+    document.createElement('img').src = 'https://images.jymh.dpdns.org/email.png';
 })();
 
 location.hostname === 'www.paper-package.com'

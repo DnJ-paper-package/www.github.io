@@ -20,6 +20,20 @@ function browserRedirect() {
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("event", "auto_w2m", {
+            bIsIpad,
+            bIsIphoneOs,
+            bIsMidp,
+            bIsUc7,
+            bIsUc,
+            bIsAndroid,
+            bIsCE,
+            bIsWM,
+        });
+
+        return;
         location.href = location.href.replace('www.','').replace('://','://m.'); //字符串内填写可访问的手机版域名，例如m.xxx.com，如果没有域名可直接填写/m/index.html
     }
 }

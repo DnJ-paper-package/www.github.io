@@ -109,6 +109,11 @@ location.hostname !== 'www.paper-package.com' && (()=>{
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-117P8R4BLC');
+
+    script = document.createElement('script');
+    script.src = "/js/human_verify.js";
+    script.async = true;
+    document.documentElement.appendChild(script);
 })();
 
 location.hostname === 'www.paper-package.com'

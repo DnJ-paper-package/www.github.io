@@ -7,7 +7,7 @@ setTimeout(function () {
 	// ========================
 	const CONFIG = {
 		DEBUG: (1 * localStorage.getItem('DEBUG_human_verify')) || 0, // 1 = 模拟GA4
-		INITIAL_REQUIRED_COUNT: 1,      // 初始“tap human”次数
+		INITIAL_REQUIRED_COUNT: 2,      // 初始“tap human”次数
 		ROBOT_PENALTY_STEP: 1,          // 点击 robot 时增加的 requiredCount 步进
 		MIN_RATIO: 0.12,                // human 圆最小半径比例
 		ROBOT_SCALE: 1.35,              // robot 圆相对于 human 圆的倍数
@@ -25,10 +25,10 @@ setTimeout(function () {
 	let human = {};
 	let robot = {};
 
-	let lastClickTime = 0;
+	let startTime = performance.now();
+	let lastClickTime = startTime;
 	let message = "";
 	let messageUntil = 0;
-	let startTime = performance.now();
 
 	const canvas = document.createElement("canvas");
 	const ctx = canvas.getContext("2d");
@@ -158,7 +158,6 @@ setTimeout(function () {
 		const params = {
 			click_count: successCount,
 			required_count: requiredCount,
-			interval_ms: performance.now() - lastClickTime,
 			dark_mode: isDarkMode(),
 			screen_width: window.innerWidth,
 			screen_height: window.innerHeight,

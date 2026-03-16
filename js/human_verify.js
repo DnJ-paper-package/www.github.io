@@ -1,6 +1,13 @@
 setTimeout(function () {
+	const EVENT_HUMAN_VERIFICATION_SUCCESS = "human_verification_success";
 	const STORAGE_KEY = "human_verified";
-	if (localStorage.getItem(STORAGE_KEY)) return;
+
+	if (localStorage.getItem(STORAGE_KEY)) {
+		gtag('event', EVENT_HUMAN_VERIFICATION_SUCCESS, {
+			human_verified_before: true
+		});
+		return;
+	}
 
 	// ========================
 	// ---- 可配置参数 ----
@@ -196,7 +203,7 @@ setTimeout(function () {
 			if (successCount >= requiredCount) {
 				localStorage.setItem(STORAGE_KEY, "1");
 				showMessage("Verified ✓");
-				sendEvent("human_verification_success", { interval_ms: interval });
+				sendEvent(EVENT_HUMAN_VERIFICATION_SUCCESS, { interval_ms: interval });
 				draw();
 				setTimeout(() => { canvas.remove(); window.removeEventListener("resize", resize); }, 400);
 				return;

@@ -56,8 +56,7 @@ setTimeout(function () {
 	function isDarkMode() { return themeQuery.matches; }
 	themeQuery.addEventListener("change", draw);
 
-	window.dataLayer = window.dataLayer || [];
-	function gtag() { dataLayer.push(arguments); }
+	function gtag() { (window.dataLayer = window.dataLayer || []).push(arguments); }
 
 	function logGA(eventName, params) {
 		if (CONFIG.DEBUG) {
